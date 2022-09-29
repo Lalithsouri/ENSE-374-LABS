@@ -47,7 +47,7 @@ ul li.active a{
 	transform: translate(-50%,-50%);
     }
 
-    .signup{
+.signup{
         max-width: 500px;
         margin: auto;
         text-align: center;
@@ -56,6 +56,14 @@ ul li.active a{
         left: 50%;
         transform: translate(-50%,-50%);
         }
+
+	.recentpolls{
+		border:1px solid black;
+		margin:5px;
+		margin-bottom:15px;
+		padding:8px;
+		background-color:whitesmoke ;
+	}
 .button{
 	position: absolute;
 	top: 70%;
