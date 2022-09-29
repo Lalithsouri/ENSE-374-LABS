@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="To do Prototype.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+   <body style="background-color:white;">
+<div class="container" ><center>
+  <h2>To do Prototype</h2>
+</center>
+  
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Login</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+<center>
+          <h1>Login</h1>
+          <table>
+           <p>
+              <tr>
+                <tr><td></td><td><label id="uname_msg" class="err_msg"></label></td></tr>
+                <tr><td>Username: </td><td> <input type="text" name="uname" size="30" /></td></tr>
+             
+                     <tr><td></td><td><label id="pswd_msg" class="err_msg"></label></td></tr>
+                <tr><td>Password: </td><td> <input type="password" name="pswd" size="30" /></td></tr></tr></p>
+        </tr></table>
+        </div>
+        <br><center>
+          <tr>
+            <input type="button" value="Login" /> 
+            <input type="reset" value ="Reset" />
+          </tr></center>
+          </br>
+        </center>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Register</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+<center>
+          <h1>Sign Up</h1>
+            <p>
+            <table>
+              
+              <tr><td></td><td><label id="email_msg" class="err_msg"></label></td></tr>
+              <tr><td>Email: </td><td> <input type="text" name="email" size="30"  /></td></tr>
+            
+                   <tr><td></td><td><label id="pswd_msg" class="err_msg"></label></td></tr>
+              <tr><td>Password: </td><td> <input type="password" name="pswd" size="30" /></td></tr>  
+            
+                    <tr><td></td><td><label id="authen_msg" class="err_msg"></label></td></tr>
+              <tr><td>Authentication: </td><td> <input type="password" name="authen" size="30" /></td></tr> </p></table>
+
+        </div>
+        <br><center>
+              <tr>
+                <input type="button" value="SignUp" onclick="SignUpForm()" />
+                <input type="reset"  value="Reset" onclick="ResetForm()"/>
+              </tr></center>
+            </br></center>
+      </div>
+    </div>
+  </div> 
+</div>
+    
+</body>
+</html>
