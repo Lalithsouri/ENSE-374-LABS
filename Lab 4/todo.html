@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+   <body style="background-color:white;">
+    <div class="container"; style="width: 40%" ><center>
+  <h2>To do Prototype</h2>
+</center>
+  
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" ></a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+<center>
+         
+        </div>
+        <br><center>
+          <tr>
+            <div id="row">
+                <div class="input-group m-3">
+                    <div class="input-group-prepend">
+                    </div>
+                    <input type="text" name="test" id="test"
+                        class="form-control m-input">
+                </div>
+            </div>
+            <div id="newinput"></div>
+            <div id="newinput_final"></div>
+                    <button id="rowAdder" type="button"
+                        class="btn btn-dark">
+                        <span class="bi bi-plus-square-dotted"> 
+                        </span> ADD
+                    </button>
+
+                    <button id="sortButton" type="button"
+                        class="btn btn-dark">
+                        <span class="bi bi-plus-square-dotted"> 
+                        </span> SORT
+                    </button>
+                   
+
+                </div>
+           
+          </tr></center>
+          </br>
+        </center>
+      </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+      //alert('test');
+      var count = 1;
+      $("#rowAdder").click(function(){
+         $("#newinput").append("<input type='text' name='textbox_" + (count++) +"'/><br />");
+      });
+
+
+      $("#sortButton").click(function(){
+        //alert('sorting called..');
+
+        var values = $("input[type='text']")
+              .map(function(){return $(this).val();}).get();
+
+        
+        values.sort();
+       
+           values.forEach(GenerateTextbox);
+        // how to convert array into textbox values
+
+        $("#newinput").hide();
+        $("#test").hide();
+
+        
+
+      });
+  })
+  function GenerateTextbox(value, index, array) {  
+    
+
+            $("#newinput_final").append("<input type='text' name='textbox_'  value = "+ value + "><br />");
+
+            
+}  
+    </script>
+    </body>
+    </html>
